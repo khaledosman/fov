@@ -1,6 +1,6 @@
-import { toRadians, calculateGreatCircleDistance } from './LocationHelpers'
-import { Location } from './Location'
-import { Customer } from './Customer'
+import { calculateGreatCircleDistance } from '../helpers/calculate-greate-circle-distance'
+import { Location } from '../model/Location'
+import { Customer } from '../model/Customer'
 
 /**
  * 

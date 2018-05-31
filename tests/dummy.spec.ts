@@ -1,8 +1,8 @@
 import "jest"
-import { parseCustomers } from '../src/CustomersParser'
-import { Customer } from '../src/Customer'
-import { getCustomersWithinRadiusFromLocation } from '../src/get-customers-within-radius'
-import { Location } from "../src/Location";
+import { parseCustomers } from '../src/helpers/parse-customers'
+import { Customer } from '../src/model/Customer'
+import { getCustomersWithinRadiusFromLocation } from '../src/helpers/get-customers-within-radius'
+import { Location } from "../src/model/Location";
 
 const dummyCustomers = [
     new Customer('51730bbd-9bce-4d28-ae30-580e2ddd1be8', new Location(50.43483821, 11.96975958)),

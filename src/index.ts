@@ -1,7 +1,8 @@
-import { Location } from './Location'
-import { Customer } from './Customer'
-import { getCustomersRaw, parseCustomers } from './CustomersParser'
-import { getCustomersWithinRadiusFromLocation } from './get-customers-within-radius'
+import { Location } from './model/Location'
+import { Customer } from './model/Customer'
+import { getCustomersRaw } from './helpers/get-customers-raw'
+import { parseCustomers } from './helpers/parse-customers'
+import { getCustomersWithinRadiusFromLocation } from './helpers/get-customers-within-radius'
 
 
 (function main() {

@@ -1,13 +1,5 @@
-import * as fs from 'fs'
-import { promisify } from 'util'
-import { Location } from './Location';
-import { Customer } from './Customer';
-
-const readFilePromisified = promisify(fs.readFile)
-
-export function getCustomersRaw(): Promise<String> {
-    return readFilePromisified('customers.txt', { encoding: 'utf8' })
-}
+import { Location } from '../model/Location';
+import { Customer } from '../model/Customer';
 
 export function parseCustomers(rawData: String): Array<Customer> {
     return rawData.trim().split('\n').map(line => {
@@ -21,7 +13,7 @@ export function parseCustomers(rawData: String): Array<Customer> {
         })
         const lat = Number.parseFloat(customer['lat'])
         const long = Number.parseFloat(customer['long'])
-        const location = lat && long ? new Location(lat, long): null
+        const location = lat && long ? new Location(lat, long) : null
         return new Customer(customer['id'], location)
     })
 }
